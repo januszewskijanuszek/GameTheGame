@@ -41,7 +41,7 @@
                   <Image url="@../textures/usable/save.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="shopIcon" fitHeight="200.0" fitWidth="200.0" onMouseEntered="#shopHover" onMouseExited="#shopHover" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+            <ImageView fx:id="shopIcon" fitHeight="200.0" fitWidth="200.0" onMouseClicked="#clickShop" onMouseEntered="#shopHover" onMouseExited="#shopHover" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                <image>
                   <Image url="@../textures/usable/price.png" />
                </image>

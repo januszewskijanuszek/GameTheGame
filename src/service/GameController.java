@@ -49,6 +49,17 @@ public class GameController implements Initializable{
     OptionAnimation optionAnimation = new OptionAnimation();
 
     //    ---------- On Click --------
+    public void clickShop(MouseEvent event) throws IOException {
+        System.out.println("Switching to main Menu");
+        // Switch between window
+        String css1 = Objects.requireNonNull(this.getClass().getResource("../style/style1.css")).toExternalForm(); // Setting css file
+        Parent rootMain = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../scenes/Shop.fxml")));
+        Stage stageMain = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene sceneMain = new Scene(rootMain);
+        sceneMain.getStylesheets().add(css1);
+        stageMain.setScene(sceneMain);
+        stageMain.show();
+    }
     public void clickTrash(MouseEvent event){
         isVanish = true;
         setGui(false);
