@@ -6,11 +6,11 @@ import javafx.scene.image.Image;
 
 public enum Head {
     NONE(
-            "No armour",
+            "Ushanka",
             9999,
             0,
             0,
-            new Image("file:src/textures/usable/cancel.png")),
+            new Image("file:src/textures/armour/head/none.png")),
     STEEL_HELMET(
             "Motor helmet",
             60,

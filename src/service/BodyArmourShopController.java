@@ -42,6 +42,7 @@ public class BodyArmourShopController implements Initializable {
     @FXML private ImageView armourTier3;
     @FXML private ImageView moneyImage;
     @FXML private ImageView exitImage;
+    @FXML private ImageView imageShifter;
 
     OptionAnimation optionAnimation = new OptionAnimation();
     // ----------- On Click ----------
@@ -70,6 +71,7 @@ public class BodyArmourShopController implements Initializable {
         optionAnimation.smoothScaleImage(armourTier3,
                 Armour.HEAVY_VEST.getTexture(),
                 Armour.HEAVY_VEST.getTexture());
+        imageShifter.setImage(Armour.HEAVY_VEST.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Buy " + Armour.HEAVY_VEST.getName() + "for " + Armour.HEAVY_VEST.getCost() + "$");
     }
@@ -77,6 +79,7 @@ public class BodyArmourShopController implements Initializable {
         optionAnimation.smoothScaleImage(armourTier2,
                 Armour.VEST.getTexture(),
                 Armour.VEST.getTexture());
+        imageShifter.setImage(Armour.VEST.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Buy " + Armour.VEST.getName() + "for " + Armour.VEST.getCost() + "$");
     }
@@ -84,6 +87,7 @@ public class BodyArmourShopController implements Initializable {
         optionAnimation.smoothScaleImage(armourTier1,
                 Armour.LIGHT_VEST.getTexture(),
                 Armour.LIGHT_VEST.getTexture());
+        imageShifter.setImage(Armour.LIGHT_VEST.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Buy " + Armour.LIGHT_VEST.getName() + "for " + Armour.LIGHT_VEST.getCost() + "$");
     }
@@ -104,11 +108,13 @@ public class BodyArmourShopController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        imageShifter.setOpacity(0.3);
         setDescription(tier1Description, Armour.LIGHT_VEST);
         setDescription(tier2Description, Armour.VEST);
         setDescription(tier3Description, Armour.HEAVY_VEST);
         EntranceAnimation.fadeInAnimation(mainGrid, 2000);
         EntranceAnimation.fadeInAnimation(mainTitle, 2000);
+        SmoothMoveAnimation.smoothAnimation(imageShifter);
         SmoothMoveAnimation.smoothAnimation(moneyLabel);
         SmoothMoveAnimation.smoothAnimation(moneyImage);
         SmoothMoveAnimation.smoothAnimation(mainTitle);
@@ -126,7 +132,7 @@ public class BodyArmourShopController implements Initializable {
             mainTitle.setTextFill(Color.ORANGE);
             mainTitle.setText("You have better armour!");
         } else {
-            Items.setHeadArmour(armour.ordinal());
+            Items.setBodyArmour(armour.ordinal());
             mainTitle.setTextFill(Color.GREEN);
             mainTitle.setText("Thanks for purchase!");
             Items.setBodyArmour(armour.ordinal());

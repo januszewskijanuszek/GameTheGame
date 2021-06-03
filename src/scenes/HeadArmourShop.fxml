@@ -11,6 +11,7 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="service.HeadArmourShopController">
    <children>
+      <ImageView fx:id="imageShifter" fitHeight="699.0" fitWidth="980.0" layoutX="219.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" />
       <GridPane fx:id="mainGrid" layoutX="191.0" layoutY="171.0" prefHeight="389.0" prefWidth="899.0">
         <columnConstraints>
           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

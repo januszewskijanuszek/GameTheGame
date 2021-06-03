@@ -37,7 +37,7 @@
                   <Image url="@../textures/shop/headArmourShop.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="weaponShopImage" fitHeight="225.0" fitWidth="225.0" onMouseEntered="#weaponHover" onMouseExited="#weaponHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+            <ImageView fx:id="weaponShopImage" fitHeight="225.0" fitWidth="225.0" onMouseClicked="#clickWeaponShop" onMouseEntered="#weaponHover" onMouseExited="#weaponHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                <image>
                   <Image url="@../textures/shop/weaponShop.png" />
                </image>

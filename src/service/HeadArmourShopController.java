@@ -41,6 +41,7 @@ public class HeadArmourShopController implements Initializable {
     @FXML private ImageView armourTier3;
     @FXML private ImageView moneyImage;
     @FXML private ImageView exitImage;
+    @FXML private ImageView imageShifter;
 
     OptionAnimation optionAnimation = new OptionAnimation();
     // ----------- On Click ----------
@@ -69,6 +70,7 @@ public class HeadArmourShopController implements Initializable {
         optionAnimation.smoothScaleImage(armourTier3,
                 Head.FLANK.getTexture(),
                 Head.FLANK.getTexture());
+        imageShifter.setImage(Head.FLANK.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Buy " + Head.FLANK.getName() + "for " + Head.FLANK.getCost() + "$");
     }
@@ -76,6 +78,7 @@ public class HeadArmourShopController implements Initializable {
         optionAnimation.smoothScaleImage(armourTier2,
                 Head.GERMAN_HELMET.getTexture(),
                 Head.GERMAN_HELMET.getTexture());
+        imageShifter.setImage(Head.GERMAN_HELMET.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Buy " + Head.GERMAN_HELMET.getName() + "for " + Head.GERMAN_HELMET.getCost() + "$");
     }
@@ -83,6 +86,7 @@ public class HeadArmourShopController implements Initializable {
         optionAnimation.smoothScaleImage(armourTier1,
                 Head.STEEL_HELMET.getTexture(),
                 Head.STEEL_HELMET.getTexture());
+        imageShifter.setImage(Head.STEEL_HELMET.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Buy " + Head.STEEL_HELMET.getName() + "for " + Head.STEEL_HELMET.getCost() + "$");
     }
@@ -103,11 +107,13 @@ public class HeadArmourShopController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        imageShifter.setOpacity(0.3);
         setDescription(tier1Description, Head.STEEL_HELMET);
         setDescription(tier2Description, Head.GERMAN_HELMET);
         setDescription(tier3Description, Head.FLANK);
         EntranceAnimation.fadeInAnimation(mainGrid, 2000);
         EntranceAnimation.fadeInAnimation(mainTitle, 2000);
+        SmoothMoveAnimation.smoothAnimation(imageShifter);
         SmoothMoveAnimation.smoothAnimation(moneyLabel);
         SmoothMoveAnimation.smoothAnimation(moneyImage);
         SmoothMoveAnimation.smoothAnimation(mainTitle);

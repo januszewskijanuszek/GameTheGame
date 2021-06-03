@@ -53,7 +53,7 @@ public class ShopController implements Initializable {
         stageMain.show();
     }
     public void clickHeadArmourShop(MouseEvent event) throws IOException {
-        System.out.println("Switching to Game");
+        System.out.println("Switching to Head Armour Shop");
         // Switch between window
         String css1 = Objects.requireNonNull(this.getClass().getResource("../style/style1.css")).toExternalForm(); // Setting css file
         Parent rootMain = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../scenes/HeadArmourShop.fxml")));
@@ -64,10 +64,21 @@ public class ShopController implements Initializable {
         stageMain.show();
     }
     public void clickBodyArmourShop(MouseEvent event) throws IOException {
-        System.out.println("Switching to Game");
+        System.out.println("Switching to Body Armour Shop");
         // Switch between window
         String css1 = Objects.requireNonNull(this.getClass().getResource("../style/style1.css")).toExternalForm(); // Setting css file
         Parent rootMain = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../scenes/BodyArmourShop.fxml")));
+        Stage stageMain = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene sceneMain = new Scene(rootMain);
+        sceneMain.getStylesheets().add(css1);
+        stageMain.setScene(sceneMain);
+        stageMain.show();
+    }
+    public void clickWeaponShop(MouseEvent event) throws IOException {
+        System.out.println("Switching to Body Armour Shop");
+        // Switch between window
+        String css1 = Objects.requireNonNull(this.getClass().getResource("../style/style1.css")).toExternalForm(); // Setting css file
+        Parent rootMain = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../scenes/WeaponShop.fxml")));
         Stage stageMain = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene sceneMain = new Scene(rootMain);
         sceneMain.getStylesheets().add(css1);

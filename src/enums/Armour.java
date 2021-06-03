@@ -6,11 +6,11 @@ import javafx.scene.image.Image;
 
 public enum Armour {
     NONE(
-            "No armour",
+            "Military uniform",
             9999,
             0,
             0,
-            new Image("file:src/textures/usable/cancel.png")),
+            new Image("file:src/textures/armour/body/none.png")),
     LIGHT_VEST(
             "Light bulletproof vest",
             60,
