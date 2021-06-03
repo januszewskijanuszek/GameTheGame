@@ -1,5 +1,7 @@
 package service.animation;
-
+/**
+ * @author Patryk Januszewski
+ */
 import javafx.animation.RotateTransition;
 import javafx.animation.TranslateTransition;
 import javafx.scene.Node;

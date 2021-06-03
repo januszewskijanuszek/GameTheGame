@@ -1,5 +1,7 @@
 package enums;
-
+/**
+ * @author Patryk Januszewski
+ */
 import javafx.scene.image.Image;
 
 public enum Shop {

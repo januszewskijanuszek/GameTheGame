@@ -1,4 +1,7 @@
 package service;
+/**
+ * @author Patryk Januszewski
+ */
 
 import enums.Shop;
 import enums.Usable;
@@ -49,6 +52,28 @@ public class ShopController implements Initializable {
         stageMain.setScene(sceneMain);
         stageMain.show();
     }
+    public void clickHeadArmourShop(MouseEvent event) throws IOException {
+        System.out.println("Switching to Game");
+        // Switch between window
+        String css1 = Objects.requireNonNull(this.getClass().getResource("../style/style1.css")).toExternalForm(); // Setting css file
+        Parent rootMain = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../scenes/HeadArmourShop.fxml")));
+        Stage stageMain = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene sceneMain = new Scene(rootMain);
+        sceneMain.getStylesheets().add(css1);
+        stageMain.setScene(sceneMain);
+        stageMain.show();
+    }
+    public void clickBodyArmourShop(MouseEvent event) throws IOException {
+        System.out.println("Switching to Game");
+        // Switch between window
+        String css1 = Objects.requireNonNull(this.getClass().getResource("../style/style1.css")).toExternalForm(); // Setting css file
+        Parent rootMain = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../scenes/BodyArmourShop.fxml")));
+        Stage stageMain = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene sceneMain = new Scene(rootMain);
+        sceneMain.getStylesheets().add(css1);
+        stageMain.setScene(sceneMain);
+        stageMain.show();
+    }
     // ------------ Hover -----------
     public void repairHover(MouseEvent event){
         optionAnimation.smoothScaleImage(repairShopImage,
@@ -87,6 +112,7 @@ public class ShopController implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        bottomLabel.setText("");
         EntranceAnimation.fadeInAnimation(exitImage, 2000);
         EntranceAnimation.fadeInAnimation(mainTitle, 2000);
         EntranceAnimation.fadeInAnimation(mainGrid, 2000);

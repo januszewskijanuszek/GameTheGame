@@ -1,5 +1,7 @@
 package service;
-
+/**
+ * @author Patryk Januszewski
+ */
 import enums.Usable;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

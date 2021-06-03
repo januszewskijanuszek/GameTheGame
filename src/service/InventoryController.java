@@ -1,5 +1,7 @@
 package service;
-
+/**
+ * @author Patryk Januszewski
+ */
 import enums.Armour;
 import enums.Head;
 import enums.Usable;

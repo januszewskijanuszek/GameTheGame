@@ -1,5 +1,7 @@
 package service.helper;
-
+/**
+ * @author Patryk Januszewski
+ */
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 

@@ -1,5 +1,7 @@
 package service.animation;
-
+/**
+ * @author Patryk Januszewski
+ */
 import javafx.animation.FadeTransition;
 import javafx.animation.ScaleTransition;
 import javafx.scene.Node;

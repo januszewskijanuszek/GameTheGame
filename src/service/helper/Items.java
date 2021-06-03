@@ -1,5 +1,7 @@
 package service.helper;
-
+/**
+ * @author Patryk Januszewski
+ */
 import java.io.File;
 
 public class Items {

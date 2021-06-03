@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="mainFrame" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="service.ShopController">
    <children>
       <GridPane fx:id="mainGrid" layoutX="56.0" layoutY="242.0" prefHeight="270.0" prefWidth="1135.0">
@@ -23,7 +22,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fx:id="bodyArmourShopImage" fitHeight="225.0" fitWidth="225.0" onMouseEntered="#bodyArmourHover" onMouseExited="#bodyArmourHover" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="bodyArmourShopImage" fitHeight="225.0" fitWidth="225.0" onMouseClicked="#clickBodyArmourShop" onMouseEntered="#bodyArmourHover" onMouseExited="#bodyArmourHover" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../textures/shop/bodyArmourShop.png" />
                </image>
@@ -33,7 +32,7 @@
                   <Image url="@../textures/shop/repairShop.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="headArmourShopImage" fitHeight="225.0" fitWidth="225.0" onMouseEntered="#headArmourHover" onMouseExited="#headArmourHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+            <ImageView fx:id="headArmourShopImage" fitHeight="225.0" fitWidth="225.0" onMouseClicked="#clickHeadArmourShop" onMouseEntered="#headArmourHover" onMouseExited="#headArmourHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                <image>
                   <Image url="@../textures/shop/headArmourShop.png" />
                </image>

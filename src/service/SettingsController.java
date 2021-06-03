@@ -1,4 +1,7 @@
 package service;
+/**
+ * @author Patryk Januszewski
+ */
 
 import enums.Usable;
 import javafx.event.ActionEvent;
