@@ -1,0 +1,14 @@
+.root{
+    -fx-background-color: "111111";
+}
+.label{
+    -fx-text-fill: "#ffffff";
+    -fx-font-family: Inconsolata;
+}
+.button{
+    -fx-font-family: Inconsolata;
+}
+.progress-bar{
+    -fx-background-color: "111111";
+    -fx-accent: "111111";
+}
