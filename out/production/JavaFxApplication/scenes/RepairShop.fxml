@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="service.RepairShopController">
+   <children>
+      <ImageView fx:id="imageShifter" fitHeight="415.0" fitWidth="461.0" layoutX="756.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
+      <GridPane fx:id="mainGrid" layoutX="69.0" layoutY="176.0" prefHeight="369.0" prefWidth="601.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="300.0" minHeight="10.0" prefHeight="294.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="153.0" minHeight="10.0" prefHeight="75.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="armourImage" fitHeight="231.0" fitWidth="253.0" onMouseClicked="#clickArmour" onMouseEntered="#bodyHover" onMouseExited="#bodyHover" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="headImage" fitHeight="231.0" fitWidth="253.0" onMouseClicked="#clickHead" onMouseEntered="#headHover" onMouseExited="#headHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+            <ProgressBar fx:id="progressBarBody" onMouseEntered="#progressBarBodyHover" onMouseExited="#progressBarBodyHover" prefHeight="38.0" prefWidth="276.0" progress="0.0" GridPane.rowIndex="1" />
+            <ProgressBar fx:id="progressBarHead" onMouseEntered="#progressBarHeadHover" onMouseExited="#progressBarHeadHover" prefHeight="38.0" prefWidth="267.0" progress="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="bodyProgressBarInfo" alignment="CENTER" ellipsisString="\%" onMouseEntered="#bodyProgressBarInfoHover" onMouseExited="#bodyProgressBarInfoHover" prefHeight="38.0" prefWidth="83.0" text="Label" GridPane.rowIndex="1">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="headProgressBarInfo" alignment="CENTER" ellipsisString="\%" onMouseEntered="#headProgressBarInfoHover" onMouseExited="#headProgressBarInfoHover" prefHeight="38.0" prefWidth="78.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Label fx:id="mainTitle" alignment="CENTER" layoutX="490.0" layoutY="34.0" prefHeight="68.0" prefWidth="764.0" text="Repair item!">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Label>
+      <Label fx:id="infoLabel" alignment="CENTER" layoutX="688.0" layoutY="219.0" prefHeight="283.0" prefWidth="558.0" text="Label">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="exitImage" fitHeight="183.0" fitWidth="196.0" layoutX="1045.0" layoutY="511.0" onMouseClicked="#clickExit" onMouseEntered="#exitHover" onMouseExited="#exitHover" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../textures/usable/exitDoor.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -13,6 +13,10 @@ public enum GameGui {
             new Image("file:src/textures/gameGui/headShotGreen.png")),
     HEAD_SHOT(
             new Image("file:src/textures/gameGui/headShot.png")),
+    BURN(
+            new Image("file:src/textures/gameGui/burn.png")),
+    BURN_ORANGE(
+            new Image("file:src/textures/gameGui/burnOrange.png")),
     SURRENDER(
             new Image("file:src/textures/gameGui/surrender.png")),
     SURRENDER_RED(
