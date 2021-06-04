@@ -21,6 +21,7 @@ import service.helper.Items;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.util.*;
 
@@ -31,16 +32,30 @@ public class ChoseSaveController implements Initializable {
     @FXML private ImageView saveImage2;
     @FXML private ImageView saveImage3;
 
+    File saveFile1 = new File("src/saves/save1.txt");
+    File saveFile2 = new File("src/saves/save2.txt");
+    File saveFile3 = new File("src/saves/save3.txt");
+
     OptionAnimation optionAnimation = new OptionAnimation();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        if(!saveFile1.exists()){
+            saveImage1.setImage(Usable.CROSS.getTexture());
+        }
+        if(!saveFile2.exists()){
+            saveImage2.setImage(Usable.CROSS.getTexture());
+        }
+        if(!saveFile3.exists()){
+            saveImage3.setImage(Usable.CROSS.getTexture());
+        }
+
         SmoothMoveAnimation.smoothAnimation(mainTitle);
         EntranceAnimation.scaleIn(mainTitle, 1.2);
         EntranceAnimation.fadeInAnimation(mainTitle, 2000);
         EntranceAnimation.fadeInAnimation(saveImage1, 2000);
         EntranceAnimation.fadeInAnimation(saveImage2, 2000);
-        EntranceAnimation.fadeInAnimation(saveImage3, 200);
+        EntranceAnimation.fadeInAnimation(saveImage3, 2000);
     }
 
     public void clickedSave1(MouseEvent event) throws IOException {
@@ -86,23 +101,56 @@ public class ChoseSaveController implements Initializable {
         stageMain.setScene(sceneMain);
         stageMain.show();
     }
-
+    // --------- Hovers ----------------
     public void saveHover1(MouseEvent event){
-        optionAnimation.smoothScaleImage(saveImage1,
-                Usable.SAVE_BLUE.getTexture(),
-                Usable.SAVE.getTexture());
-        mainTitle.setText("Save Slot 1");
+        if(saveFile1.exists()){
+            optionAnimation.smoothScaleImage(saveImage1,
+                    Usable.SAVE_BLUE.getTexture(),
+                    Usable.SAVE.getTexture());
+            mainTitle.setText("Save Slot 1");
+        } else {
+            optionAnimation.smoothScaleImage(saveImage1,
+                    Usable.CROSS_GREEN.getTexture(),
+                    Usable.CROSS.getTexture());
+            mainTitle.setText("Create save 1");
+        }
     }
     public void saveHover2(MouseEvent event){
-        optionAnimation.smoothScaleImage(saveImage2,
-                Usable.SAVE_BLUE.getTexture(),
-                Usable.SAVE.getTexture());
-        mainTitle.setText("Save Slot 2");
+        if(saveFile2.exists()){
+            optionAnimation.smoothScaleImage(saveImage2,
+                    Usable.SAVE_BLUE.getTexture(),
+                    Usable.SAVE.getTexture());
+            mainTitle.setText("Save Slot 2");
+        } else {
+            optionAnimation.smoothScaleImage(saveImage2,
+                    Usable.CROSS_GREEN.getTexture(),
+                    Usable.CROSS.getTexture());
+            mainTitle.setText("Create save 2");
+        }
     }
     public void saveHover3(MouseEvent event){
-        optionAnimation.smoothScaleImage(saveImage3,
-                Usable.SAVE_BLUE.getTexture(),
-                Usable.SAVE.getTexture());
-        mainTitle.setText("Save Slot 3");
+        if(saveFile3.exists()){
+            optionAnimation.smoothScaleImage(saveImage3,
+                    Usable.SAVE_BLUE.getTexture(),
+                    Usable.SAVE.getTexture());
+            mainTitle.setText("Save Slot 3");
+        } else {
+            optionAnimation.smoothScaleImage(saveImage3,
+                    Usable.CROSS_GREEN.getTexture(),
+                    Usable.CROSS.getTexture());
+            mainTitle.setText("Create save 3");
+        }
     }
+    //private void createFile(File file) throws IOException {
+    //    if(file.createNewFile()){
+    //        PrintWriter printWriter = new PrintWriter(file);
+    //        printWriter.println(0);
+    //        printWriter.println(0);
+    //        printWriter.println(0);
+    //        printWriter.println(0);
+    //        printWriter.println(0);
+    //        printWriter.println(100.0);
+    //        printWriter.println(100.0);
+    //    }
+    //}
 }

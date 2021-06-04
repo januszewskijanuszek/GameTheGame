@@ -27,7 +27,7 @@
                   <Image url="@../textures/shop/bodyArmourShop.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="repairShopImage" fitHeight="225.0" fitWidth="225.0" onMouseEntered="#repairHover" onMouseExited="#repairHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+            <ImageView fx:id="repairShopImage" fitHeight="225.0" fitWidth="225.0" onMouseClicked="#clickRepairShop" onMouseEntered="#repairHover" onMouseExited="#repairHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
                <image>
                   <Image url="@../textures/shop/repairShop.png" />
                </image>

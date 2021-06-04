@@ -53,6 +53,12 @@ public enum Usable {
             new Image("file:src/textures/usable/trash.png")),
     TRASH_RED(
             new Image("file:src/textures/usable/trashRed.png")),
+    CROSS(
+            new Image("file:src/textures/usable/cross.png")),
+    CROSS_RED(
+            new Image("file:src/textures/usable/crossRed.png")),
+    CROSS_GREEN(
+            new Image("file:src/textures/usable/crossGreen.png")),
     GRAVE(
             new Image("file:src/textures/usable/inventory.png")),
     WAR(

@@ -82,7 +82,10 @@ public class GameController implements Initializable{
         setGui(true);
         EntranceAnimation.fadeInAnimation(mainGrid, 2000);
     }
-    public void clickSave(MouseEvent event) throws FileNotFoundException {
+    public void clickSave(MouseEvent event) throws IOException {
+        if(Items.isCreateFile()){
+            Items.getFile().createNewFile();
+        }
         PrintWriter printWriter = new PrintWriter(Items.getFile());
         printWriter.flush();
         printWriter.println(Items.getWeapon());
@@ -107,7 +110,7 @@ public class GameController implements Initializable{
         EntranceAnimation.fadeInAnimation(no, 2000);
         EntranceAnimation.fadeInAnimation(yes, 2000);
     }
-    public void clickYes(MouseEvent event) throws FileNotFoundException {
+    public void clickYes(MouseEvent event) throws IOException {
         if(isVanish){
             Items.vanish();
             clickNo(event);

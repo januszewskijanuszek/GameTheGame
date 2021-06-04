@@ -45,68 +45,6 @@ public class menuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        File settingsFile = new File("src/saves/settings.txt");
-        File saveFile1 = new File("src/saves/save1.txt");
-        File saveFile2 = new File("src/saves/save2.txt");
-        File saveFile3 = new File("src/saves/save3.txt");
-
-        // Loading settings file
-        if(settingsFile.exists()){
-            try {
-                Scanner scanner = new Scanner(settingsFile);
-                System.out.println("settingsFile exist!");
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-        } else {
-            System.out.println("settings file does not exist");
-            try {
-                PrintWriter printWriter = new PrintWriter(settingsFile);
-                settingsFile.createNewFile();
-                printWriter.println(0);
-                titleText.setText("Restart Game!");
-                printWriter.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        // Loading info from files to List!
-        if(saveFile1.exists()
-                && saveFile2.exists()
-                && saveFile3.exists()){
-            try {
-                Scanner scanner1 = new Scanner(saveFile1);
-                Scanner scanner2 = new Scanner(saveFile2);
-                Scanner scanner3 = new Scanner(saveFile3);
-                System.out.println("saveFile1 exist!");
-                System.out.println("saveFile2 exist!");
-                System.out.println("saveFile3 exist!");
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-        } else {
-            try {
-                PrintWriter printWriter1 = new PrintWriter(saveFile1);
-                PrintWriter printWriter2 = new PrintWriter(saveFile2);
-                PrintWriter printWriter3 = new PrintWriter(saveFile3);
-                saveFile1.createNewFile();
-                saveFile2.createNewFile();
-                saveFile3.createNewFile();
-                for(int i = 0 ; i < 5 ; i++){
-                    printWriter1.println(0);
-                    printWriter2.println(0);
-                    printWriter3.println(0);
-                }
-                titleText.setText("Restart Game!");
-                printWriter1.close();
-                printWriter2.close();
-                printWriter3.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
         System.out.println("Controller: menuController");
         no.setVisible(false);
         yes.setVisible(false);

@@ -5,6 +5,7 @@ package service.helper;
 import java.io.File;
 
 public class Items {
+    private static boolean createFile;
     private static File file;
     private static int weapon;
     private static int bodyArmour;
@@ -13,6 +14,10 @@ public class Items {
     private static int experience;
     private static double headArmourDurability;
     private static double bodyArmourDurability;
+
+    public static boolean isCreateFile() {
+        return createFile;
+    }
 
     public static File getFile() {
         return file;
@@ -72,6 +77,10 @@ public class Items {
 
     public static void setBodyArmourDurability(double bodyArmourDurability) {
         Items.bodyArmourDurability = bodyArmourDurability;
+    }
+
+    public static void setCreateFile(boolean createFile) {
+        Items.createFile = createFile;
     }
 
     public static void setFile(File file) {

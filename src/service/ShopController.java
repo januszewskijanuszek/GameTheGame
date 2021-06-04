@@ -85,6 +85,17 @@ public class ShopController implements Initializable {
         stageMain.setScene(sceneMain);
         stageMain.show();
     }
+    public void clickRepairShop(MouseEvent event) throws IOException {
+        System.out.println("Switching to Body Repair");
+        // Switch between window
+        String css1 = Objects.requireNonNull(this.getClass().getResource("../style/style1.css")).toExternalForm(); // Setting css file
+        Parent rootMain = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../scenes/RepairShop.fxml")));
+        Stage stageMain = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene sceneMain = new Scene(rootMain);
+        sceneMain.getStylesheets().add(css1);
+        stageMain.setScene(sceneMain);
+        stageMain.show();
+    }
     // ------------ Hover -----------
     public void repairHover(MouseEvent event){
         optionAnimation.smoothScaleImage(repairShopImage,
