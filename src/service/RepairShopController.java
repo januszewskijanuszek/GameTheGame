@@ -129,7 +129,7 @@ public class RepairShopController implements Initializable {
     public void progressBarHeadHover(MouseEvent event){
         optionAnimation.smoothsScaleProgressBar(progressBarHead, headProgressBarInfo, Color.GRAY);
     }
-    public void exitHover(MouseEvent event){
+    public void exitHover(){
         optionAnimation.smoothScaleImage(exitImage,
                 Usable.EXIT_DOOR_RED.getTexture(),
                 Usable.EXIT_DOOR.getTexture());

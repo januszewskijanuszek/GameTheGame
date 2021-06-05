@@ -1,9 +1,6 @@
 package service;
-/**
- * @author Patryk Januszewski
- */
+
 import enums.Armour;
-import enums.Head;
 import enums.Usable;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -47,13 +44,13 @@ public class BodyArmourShopController implements Initializable {
     OptionAnimation optionAnimation = new OptionAnimation();
     OptionAnimation optionAnimation2 = new OptionAnimation();
     // ----------- On Click ----------
-    public void clickTier3(MouseEvent event){
+    public void clickTier3(){
         checkAffordable(Armour.HEAVY_VEST);
     }
-    public void clickTier2(MouseEvent event){
+    public void clickTier2(){
         checkAffordable(Armour.VEST);
     }
-    public void clickTier1(MouseEvent event){
+    public void clickTier1(){
         checkAffordable(Armour.LIGHT_VEST);
     }
     public void clickExit(MouseEvent event) throws IOException {
@@ -68,7 +65,7 @@ public class BodyArmourShopController implements Initializable {
         stageMain.show();
     }
     // ----------- Hover ----------
-    public void armourTier3Hover(MouseEvent event){
+    public void armourTier3Hover(){
         optionAnimation.smoothScaleImage(armourTier3,
                 Armour.HEAVY_VEST.getTexture(),
                 Armour.HEAVY_VEST.getTexture());
@@ -77,7 +74,7 @@ public class BodyArmourShopController implements Initializable {
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Buy " + Armour.HEAVY_VEST.getName() + "for " + Armour.HEAVY_VEST.getCost() + "$");
     }
-    public void armourTier2Hover(MouseEvent event){
+    public void armourTier2Hover(){
         optionAnimation.smoothScaleImage(armourTier2,
                 Armour.VEST.getTexture(),
                 Armour.VEST.getTexture());
@@ -86,7 +83,7 @@ public class BodyArmourShopController implements Initializable {
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Buy " + Armour.VEST.getName() + "for " + Armour.VEST.getCost() + "$");
     }
-    public void armourTier1Hover(MouseEvent event){
+    public void armourTier1Hover(){
         optionAnimation.smoothScaleImage(armourTier1,
                 Armour.LIGHT_VEST.getTexture(),
                 Armour.LIGHT_VEST.getTexture());
@@ -95,14 +92,14 @@ public class BodyArmourShopController implements Initializable {
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Buy " + Armour.LIGHT_VEST.getName() + "for " + Armour.LIGHT_VEST.getCost() + "$");
     }
-    public void moneyHover(MouseEvent event){
+    public void moneyHover(){
         optionAnimation.smoothScaleImage(moneyImage,
                 Usable.COIN_YELLOW.getTexture(),
                 Usable.COIN.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Current Money");
     }
-    public void exitHover(MouseEvent event){
+    public void exitHover(){
         optionAnimation.smoothScaleImage(exitImage,
                 Usable.EXIT_DOOR_RED.getTexture(),
                 Usable.EXIT_DOOR.getTexture());

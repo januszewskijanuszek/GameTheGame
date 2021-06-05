@@ -1,7 +1,5 @@
 package service;
-/**
- * @author Patryk Januszewski
- */
+
 import enums.Usable;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,9 +17,7 @@ import service.animation.SmoothMoveAnimation;
 import service.helper.Items;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.URL;
 import java.util.*;
 
@@ -102,7 +98,7 @@ public class ChoseSaveController implements Initializable {
         stageMain.show();
     }
     // --------- Hovers ----------------
-    public void saveHover1(MouseEvent event){
+    public void saveHover1(){
         if(saveFile1.exists()){
             optionAnimation.smoothScaleImage(saveImage1,
                     Usable.SAVE_BLUE.getTexture(),
@@ -115,7 +111,7 @@ public class ChoseSaveController implements Initializable {
             mainTitle.setText("Create save 1");
         }
     }
-    public void saveHover2(MouseEvent event){
+    public void saveHover2(){
         if(saveFile2.exists()){
             optionAnimation.smoothScaleImage(saveImage2,
                     Usable.SAVE_BLUE.getTexture(),
@@ -128,7 +124,7 @@ public class ChoseSaveController implements Initializable {
             mainTitle.setText("Create save 2");
         }
     }
-    public void saveHover3(MouseEvent event){
+    public void saveHover3(){
         if(saveFile3.exists()){
             optionAnimation.smoothScaleImage(saveImage3,
                     Usable.SAVE_BLUE.getTexture(),

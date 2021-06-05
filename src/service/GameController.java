@@ -1,7 +1,5 @@
 package service;
-/**
- * @author Patryk Januszewski
- */
+
 import enums.Usable;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,8 +19,6 @@ import service.animation.OptionAnimation;
 import service.animation.SmoothMoveAnimation;
 import service.helper.Items;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URL;
@@ -73,7 +69,7 @@ public class GameController implements Initializable{
         stageMain.setScene(sceneMain);
         stageMain.show();
     }
-    public void clickTrash(MouseEvent event){
+    public void clickTrash(){
         isVanish = true;
         setGui(false);
         yesSave.setVisible(false);
@@ -89,7 +85,7 @@ public class GameController implements Initializable{
         stageMain.setScene(sceneMain);
         stageMain.show();
     }
-    public void clickYesSave(MouseEvent event){
+    public void clickYesSave(){
         setGui(true);
         EntranceAnimation.fadeInAnimation(mainGrid, 2000);
     }
@@ -114,7 +110,7 @@ public class GameController implements Initializable{
         yesSave.setVisible(true);
         bottomLabel.setText("Your progress has been saved!");
     }
-    public void clickExit(MouseEvent event){
+    public void clickExit(){
         setGui(false);
         yesSave.setVisible(false);
         mainTitle.setText("Are you sure?");
@@ -143,20 +139,20 @@ public class GameController implements Initializable{
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Your progress has been saved!");
     }
-    public void noHover(MouseEvent event){
+    public void noHover(){
         optionAnimation.smoothScaleImage(no,
                 Usable.CANCEL_RED.getTexture(),
                 Usable.CANCEL.getTexture());
         bottomLabel.setText("NO");
     }
-    public void yesHover(MouseEvent event){
+    public void yesHover(){
         optionAnimation.smoothScaleImage(yes,
                 Usable.APPLY_GREEN.getTexture(),
                 Usable.APPLY.getTexture());
         bottomLabel.setText("YES");
     }
 
-    public void exitHover(MouseEvent event){
+    public void exitHover(){
         EntranceAnimation.fadeInAnimation(mainTitle, TITLE_FADE);
         optionAnimation.smoothScaleImage(exitIcon,
                 Usable.EXIT_DOOR_RED.getTexture(),
@@ -166,7 +162,7 @@ public class GameController implements Initializable{
         bottomLabel.setText("");
     }
 
-    public void trashHover(MouseEvent event){
+    public void trashHover(){
         EntranceAnimation.fadeInAnimation(mainTitle, TITLE_FADE);
         optionAnimation.smoothScaleImage(trashIcon,
                 Usable.TRASH_RED.getTexture(),
@@ -176,7 +172,7 @@ public class GameController implements Initializable{
         bottomLabel.setText("");
     }
 
-    public void inventoryHover(MouseEvent event){
+    public void inventoryHover(){
         EntranceAnimation.fadeInAnimation(mainTitle, TITLE_FADE);
         optionAnimation.smoothScaleImage(inventoryIcon,
                 Usable.INVENTORY_GRAY.getTexture(),
@@ -186,7 +182,7 @@ public class GameController implements Initializable{
         bottomLabel.setText("");
     }
 
-    public void warHover(MouseEvent event){
+    public void warHover(){
         EntranceAnimation.fadeInAnimation(mainTitle, TITLE_FADE);
         optionAnimation.smoothScaleImage(warIcon,
                 Usable.WAR_ORANGE.getTexture(),
@@ -196,7 +192,7 @@ public class GameController implements Initializable{
         bottomLabel.setText("");
     }
 
-    public void shopHover(MouseEvent event){
+    public void shopHover(){
         EntranceAnimation.fadeInAnimation(mainTitle, TITLE_FADE);
         optionAnimation.smoothScaleImage(shopIcon,
                 Usable.PRICE_GREEN.getTexture(),
@@ -206,7 +202,7 @@ public class GameController implements Initializable{
         bottomLabel.setText("");
     }
 
-    public void saveHover(MouseEvent event){
+    public void saveHover(){
         EntranceAnimation.fadeInAnimation(mainTitle, TITLE_FADE);
         optionAnimation.smoothScaleImage(saveIcon,
                 Usable.SAVE_BLUE.getTexture(),

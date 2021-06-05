@@ -1,7 +1,5 @@
 package service;
-/**
- * @author Patryk Januszewski
- */
+
 import enums.Armour;
 import enums.Head;
 import enums.Usable;
@@ -66,7 +64,7 @@ public class InventoryController implements Initializable {
     }
 
     //  --------- Hover ----------
-    public void exitHover(MouseEvent event){
+    public void exitHover(){
         optionAnimation.smoothScaleImage(exitImage,
                 Usable.EXIT_DOOR_RED.getTexture(),
                 Usable.EXIT_DOOR.getTexture());

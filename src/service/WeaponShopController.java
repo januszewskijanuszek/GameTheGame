@@ -1,6 +1,5 @@
 package service;
 
-import enums.Armour;
 import enums.Usable;
 import enums.Weapon;
 import javafx.fxml.FXML;
@@ -10,7 +9,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
@@ -45,22 +43,22 @@ public class WeaponShopController implements Initializable {
 
     OptionAnimation optionAnimation = new OptionAnimation();
     // ---------- On Click -----------
-    public void clickPistol(MouseEvent event){
+    public void clickPistol(){
         checkAffordable(Weapon.PISTOL);
     }
-    public void clickBoltActionRifleImage(MouseEvent event){
+    public void clickBoltActionRifleImage(){
         checkAffordable(Weapon.BOLT_ACTION_RIFLE);
     }
-    public void clickMp5(MouseEvent event){
+    public void clickMp5(){
         checkAffordable(Weapon.MP5);
     }
-    public void clickFalafel(MouseEvent event){
+    public void clickFalafel(){
         checkAffordable(Weapon.FN_FAL);
     }
-    public void clickAKM(MouseEvent event){
+    public void clickAKM(){
         checkAffordable(Weapon.AKM);
     }
-    public void clickFlamethrower(MouseEvent event){
+    public void clickFlamethrower(){
         checkAffordable(Weapon.FLAMETHROWER);
     }
     public void clickExit(MouseEvent event) throws IOException {
@@ -75,56 +73,56 @@ public class WeaponShopController implements Initializable {
         stageMain.show();
     }
     // ---------- Hovers ------------
-    public void pistolHover(MouseEvent event){
+    public void pistolHover(){
         optionAnimation.smoothScaleImage(pistolImage,
                 Weapon.PISTOL.getTexture(),
                 Weapon.PISTOL.getTexture());
         EntranceAnimation.fadeInAnimation(infoLabel, 1000);
         changeInfo(Weapon.PISTOL, infoLabel);
     }
-    public void boltActionRifleHover(MouseEvent event){
+    public void boltActionRifleHover(){
         optionAnimation.smoothScaleImage(boltActionRifleImage,
                 Weapon.BOLT_ACTION_RIFLE.getTexture(),
                 Weapon.BOLT_ACTION_RIFLE.getTexture());
         EntranceAnimation.fadeInAnimation(infoLabel, 1000);
         changeInfo(Weapon.BOLT_ACTION_RIFLE, infoLabel);
     }
-    public void mp5Hover(MouseEvent event){
+    public void mp5Hover(){
         optionAnimation.smoothScaleImage(Mp5Image,
                 Weapon.MP5.getTexture(),
                 Weapon.MP5.getTexture());
         EntranceAnimation.fadeInAnimation(infoLabel, 1000);
         changeInfo(Weapon.MP5, infoLabel);
     }
-    public void falafelHover(MouseEvent event){
+    public void falafelHover(){
         optionAnimation.smoothScaleImage(falafelImage,
                 Weapon.FN_FAL.getTexture(),
                 Weapon.FN_FAL.getTexture());
         EntranceAnimation.fadeInAnimation(infoLabel, 1000);
         changeInfo(Weapon.FN_FAL, infoLabel);
     }
-    public void AKMHover(MouseEvent event){
+    public void AKMHover(){
         optionAnimation.smoothScaleImage(AKMImage,
                 Weapon.AKM.getTexture(),
                 Weapon.AKM.getTexture());
         EntranceAnimation.fadeInAnimation(infoLabel, 1000);
         changeInfo(Weapon.AKM, infoLabel);
     }
-    public void flamethrowerHover(MouseEvent event){
+    public void flamethrowerHover(){
         optionAnimation.smoothScaleImage(FlamethrowerImage,
                 Weapon.FLAMETHROWER.getTexture(),
                 Weapon.FLAMETHROWER.getTexture());
         EntranceAnimation.fadeInAnimation(infoLabel, 1000);
         changeInfo(Weapon.FLAMETHROWER, infoLabel);
     }
-    public void exitHover(MouseEvent event){
+    public void exitHover(){
         optionAnimation.smoothScaleImage(exitImage,
                 Usable.EXIT_DOOR_RED.getTexture(),
                 Usable.EXIT_DOOR.getTexture());
         EntranceAnimation.fadeInAnimation(infoLabel, 1000);
         infoLabel.setText("EXIT");
     }
-    public void moneyHover(MouseEvent event){
+    public void moneyHover(){
         optionAnimation.smoothScaleImage(moneyImage,
                 Usable.COIN_YELLOW.getTexture(),
                 Usable.COIN.getTexture());
@@ -140,6 +138,7 @@ public class WeaponShopController implements Initializable {
         imageShifter.setScaleX(3);
         infoLabel.setText("");
         moneyLabel.setText("" + Items.getMoney());
+        EntranceAnimation.fadeInAnimation(gridPane, 2000);
         SmoothMoveAnimation.smoothAnimation(infoLabel);
         SmoothMoveAnimation.smoothAnimation(mainTitle);
     }

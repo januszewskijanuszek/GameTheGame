@@ -1,7 +1,4 @@
 package service;
-/**
- * @author Patryk Januszewski
- */
 
 import enums.Usable;
 import javafx.event.ActionEvent;
@@ -40,14 +37,14 @@ public class SettingsController implements Initializable {
         WindowChanger.fullscreen(checkBoxFullscreen.isSelected(), settingsWindow);
     }
 
-    public void hoverExit(MouseEvent event){
+    public void hoverExit(){
         optionAnimation.smoothScaleImage(exit,
                 Usable.EXIT_DOOR_RED.getTexture(),
                 Usable.EXIT_DOOR.getTexture());
         setting.setText("EXIT");
     }
 
-    public void hoverFullscreen(MouseEvent event){
+    public void hoverFullscreen(){
         setting.setText("Set fullscreen");
     }
 
@@ -72,10 +69,6 @@ public class SettingsController implements Initializable {
             while(scanner.hasNextLine()){
                 settingsList.add(Integer.parseInt(scanner.nextLine()));
             }
-            //if(settingsList.get(0) == 1){
-                //WindowChanger.fullscreen(true, settingsWindow);
-                //checkBoxFullscreen.setSelected(true);
-            //}
             System.out.println("Fullscreen: " + settingsList.get(0));
         } catch (FileNotFoundException e) {
             System.out.println("Save file not found!");

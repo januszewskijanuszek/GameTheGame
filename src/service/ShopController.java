@@ -1,7 +1,4 @@
 package service;
-/**
- * @author Patryk Januszewski
- */
 
 import enums.Shop;
 import enums.Usable;
@@ -97,35 +94,35 @@ public class ShopController implements Initializable {
         stageMain.show();
     }
     // ------------ Hover -----------
-    public void repairHover(MouseEvent event){
+    public void repairHover(){
         optionAnimation.smoothScaleImage(repairShopImage,
                 Shop.REPAIR_SHOP_GREEN.getTexture(),
                 Shop.REPAIR_SHOP.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Repair");
     }
-    public void weaponHover(MouseEvent event){
+    public void weaponHover(){
         optionAnimation.smoothScaleImage(weaponShopImage,
                 Shop.WEAPON_SHOP_GREEN.getTexture(),
                 Shop.WEAPON_SHOP.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Weapon");
     }
-    public void headArmourHover(MouseEvent event){
+    public void headArmourHover(){
         optionAnimation.smoothScaleImage(headArmourShopImage,
                 Shop.HEAD_ARMOUR_SHOP_GREEN.getTexture(),
                 Shop.HEAD_ARMOUR_SHOP.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Head Armour");
     }
-    public void bodyArmourHover(MouseEvent event){
+    public void bodyArmourHover(){
         optionAnimation.smoothScaleImage(bodyArmourShopImage,
                 Shop.BODY_ARMOUR_SHOP_GREEN.getTexture(),
                 Shop.BODY_ARMOUR_SHOP.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Body Armour");
     }
-    public void exitHover(MouseEvent event){
+    public void exitHover(){
         optionAnimation.smoothScaleImage(exitImage,
                 Usable.EXIT_DOOR_RED.getTexture(),
                 Usable.EXIT_DOOR.getTexture());
