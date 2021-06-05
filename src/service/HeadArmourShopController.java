@@ -44,6 +44,7 @@ public class HeadArmourShopController implements Initializable {
     @FXML private ImageView imageShifter;
 
     OptionAnimation optionAnimation = new OptionAnimation();
+    OptionAnimation optionAnimation2 = new OptionAnimation();
     // ----------- On Click ----------
     public void clickTier3(MouseEvent event){
         checkAffordable(Head.FLANK);
@@ -70,6 +71,7 @@ public class HeadArmourShopController implements Initializable {
         optionAnimation.smoothScaleImage(armourTier3,
                 Head.FLANK.getTexture(),
                 Head.FLANK.getTexture());
+        optionAnimation2.smoothScale(tier3Description);
         imageShifter.setImage(Head.FLANK.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Buy " + Head.FLANK.getName() + "for " + Head.FLANK.getCost() + "$");
@@ -78,6 +80,7 @@ public class HeadArmourShopController implements Initializable {
         optionAnimation.smoothScaleImage(armourTier2,
                 Head.GERMAN_HELMET.getTexture(),
                 Head.GERMAN_HELMET.getTexture());
+        optionAnimation2.smoothScale(tier2Description);
         imageShifter.setImage(Head.GERMAN_HELMET.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Buy " + Head.GERMAN_HELMET.getName() + "for " + Head.GERMAN_HELMET.getCost() + "$");
@@ -86,6 +89,7 @@ public class HeadArmourShopController implements Initializable {
         optionAnimation.smoothScaleImage(armourTier1,
                 Head.STEEL_HELMET.getTexture(),
                 Head.STEEL_HELMET.getTexture());
+        optionAnimation2.smoothScale(tier1Description);
         imageShifter.setImage(Head.STEEL_HELMET.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Buy " + Head.STEEL_HELMET.getName() + "for " + Head.STEEL_HELMET.getCost() + "$");
@@ -108,6 +112,7 @@ public class HeadArmourShopController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         imageShifter.setOpacity(0.3);
+        imageShifter.setRotate(30);
         setDescription(tier1Description, Head.STEEL_HELMET);
         setDescription(tier2Description, Head.GERMAN_HELMET);
         setDescription(tier3Description, Head.FLANK);
@@ -118,9 +123,9 @@ public class HeadArmourShopController implements Initializable {
         SmoothMoveAnimation.smoothAnimation(moneyImage);
         SmoothMoveAnimation.smoothAnimation(mainTitle);
         SmoothMoveAnimation.smoothAnimation(bottomLabel);
-        SmoothMoveAnimation.smoothAnimation(tier1Description);
-        SmoothMoveAnimation.smoothAnimation(tier2Description);
-        SmoothMoveAnimation.smoothAnimation(tier3Description);
+        // SmoothMoveAnimation.smoothAnimation(tier1Description);
+        // SmoothMoveAnimation.smoothAnimation(tier2Description);
+        // SmoothMoveAnimation.smoothAnimation(tier3Description);
         moneyLabel.setText("" + Items.getMoney());
     }
     private void checkAffordable(Head head){

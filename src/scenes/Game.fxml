@@ -56,7 +56,7 @@
                   <Image url="@../textures/usable/inventory.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="warIcon" fitHeight="200.0" fitWidth="200.0" onMouseEntered="#warHover" onMouseExited="#warHover" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="warIcon" fitHeight="200.0" fitWidth="200.0" onMouseClicked="#clickBattle" onMouseEntered="#warHover" onMouseExited="#warHover" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../textures/usable/war.png" />
                </image>

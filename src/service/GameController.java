@@ -62,6 +62,17 @@ public class GameController implements Initializable{
         stageMain.setScene(sceneMain);
         stageMain.show();
     }
+    public void clickBattle(MouseEvent event) throws IOException {
+        System.out.println("Switching to Battle");
+        // Switch between window
+        String css1 = Objects.requireNonNull(this.getClass().getResource("../style/style1.css")).toExternalForm(); // Setting css file
+        Parent rootMain = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../scenes/Gameplay.fxml")));
+        Stage stageMain = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene sceneMain = new Scene(rootMain);
+        sceneMain.getStylesheets().add(css1);
+        stageMain.setScene(sceneMain);
+        stageMain.show();
+    }
     public void clickTrash(MouseEvent event){
         isVanish = true;
         setGui(false);

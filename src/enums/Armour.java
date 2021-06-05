@@ -18,13 +18,13 @@ public enum Armour {
             150,
             new Image("file:src/textures/armour/body/armourTier1.png")),
     VEST(
-            "Light bulletproof vest",
+            "Steel vest",
             70,
             40,
             300,
             new Image("file:src/textures/armour/body/armourTier2.png")),
     HEAVY_VEST(
-            "Light bulletproof vest",
+            "Kevlar vest",
             80,
             60,
             450,

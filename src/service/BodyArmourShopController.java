@@ -45,6 +45,7 @@ public class BodyArmourShopController implements Initializable {
     @FXML private ImageView imageShifter;
 
     OptionAnimation optionAnimation = new OptionAnimation();
+    OptionAnimation optionAnimation2 = new OptionAnimation();
     // ----------- On Click ----------
     public void clickTier3(MouseEvent event){
         checkAffordable(Armour.HEAVY_VEST);
@@ -71,6 +72,7 @@ public class BodyArmourShopController implements Initializable {
         optionAnimation.smoothScaleImage(armourTier3,
                 Armour.HEAVY_VEST.getTexture(),
                 Armour.HEAVY_VEST.getTexture());
+        optionAnimation2.smoothScale(tier3Description);
         imageShifter.setImage(Armour.HEAVY_VEST.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Buy " + Armour.HEAVY_VEST.getName() + "for " + Armour.HEAVY_VEST.getCost() + "$");
@@ -79,6 +81,7 @@ public class BodyArmourShopController implements Initializable {
         optionAnimation.smoothScaleImage(armourTier2,
                 Armour.VEST.getTexture(),
                 Armour.VEST.getTexture());
+        optionAnimation2.smoothScale(tier2Description);
         imageShifter.setImage(Armour.VEST.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Buy " + Armour.VEST.getName() + "for " + Armour.VEST.getCost() + "$");
@@ -87,6 +90,7 @@ public class BodyArmourShopController implements Initializable {
         optionAnimation.smoothScaleImage(armourTier1,
                 Armour.LIGHT_VEST.getTexture(),
                 Armour.LIGHT_VEST.getTexture());
+        optionAnimation2.smoothScale(tier1Description);
         imageShifter.setImage(Armour.LIGHT_VEST.getTexture());
         EntranceAnimation.fadeInAnimation(bottomLabel, 1000);
         bottomLabel.setText("Buy " + Armour.LIGHT_VEST.getName() + "for " + Armour.LIGHT_VEST.getCost() + "$");
@@ -109,6 +113,7 @@ public class BodyArmourShopController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         imageShifter.setOpacity(0.3);
+        imageShifter.setRotate(30);
         setDescription(tier1Description, Armour.LIGHT_VEST);
         setDescription(tier2Description, Armour.VEST);
         setDescription(tier3Description, Armour.HEAVY_VEST);
