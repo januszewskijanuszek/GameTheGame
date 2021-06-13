@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="service.WeaponShopController">
+   <children>
+      <ImageView fx:id="imageShifter" fitHeight="366.0" fitWidth="399.0" layoutX="806.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="infoLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="814.0" layoutY="150.0" prefHeight="387.0" prefWidth="319.0" text="Label">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="gridPane" layoutX="148.0" layoutY="56.0" prefHeight="609.0" prefWidth="485.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="pistolImage" fitHeight="189.0" fitWidth="199.0" onMouseClicked="#clickPistol" onMouseEntered="#pistolHover" onMouseExited="#pistolHover" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../textures/weapon/glock.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="boltActionRifleImage" fitHeight="189.0" fitWidth="199.0" onMouseClicked="#clickBoltActionRifleImage" onMouseEntered="#boltActionRifleHover" onMouseExited="#boltActionRifleHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+               <image>
+                  <Image url="@../textures/weapon/enfield.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Mp5Image" fitHeight="189.0" fitWidth="199.0" onMouseClicked="#clickMp5" onMouseEntered="#mp5Hover" onMouseExited="#mp5Hover" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../textures/weapon/mp5.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="falafelImage" fitHeight="189.0" fitWidth="199.0" onMouseClicked="#clickFalafel" onMouseEntered="#falafelHover" onMouseExited="#falafelHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../textures/weapon/falafel.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="AKMImage" fitHeight="189.0" fitWidth="199.0" onMouseClicked="#clickAKM" onMouseEntered="#AKMHover" onMouseExited="#AKMHover" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../textures/weapon/ak47.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="FlamethrowerImage" fitHeight="189.0" fitWidth="199.0" onMouseClicked="#clickFlamethrower" onMouseEntered="#flamethrowerHover" onMouseExited="#flamethrowerHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../textures/weapon/flamethrower.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <ImageView fx:id="exitImage" fitHeight="189.0" fitWidth="189.0" layoutX="1038.0" layoutY="489.0" onMouseClicked="#clickExit" onMouseEntered="#exitHover" onMouseExited="#exitHover" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../textures/usable/exitDoor.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="mainTitle" alignment="CENTER" layoutX="736.0" layoutY="46.0" prefHeight="65.0" prefWidth="469.0" text="Chose gear!">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="moneyLabel" alignment="CENTER_RIGHT" layoutX="667.0" layoutY="581.0" prefHeight="77.0" prefWidth="161.0" text="Label">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="moneyImage" fitHeight="118.0" fitWidth="123.0" layoutX="858.0" layoutY="560.0" onMouseEntered="#moneyHover" onMouseExited="#moneyHover" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../textures/usable/coin.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
